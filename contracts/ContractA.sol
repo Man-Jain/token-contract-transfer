@@ -6,6 +6,7 @@ import "./ContractB.sol";
 
 contract ContractA {
   constructor() public {
+    owner = msg.sender;
   }
 
   address contractBaddress = address(0xc0f2C83a5E0Db5c9A9E5556E6bE0DB35b4d8ae77);
