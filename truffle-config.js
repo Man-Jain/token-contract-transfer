@@ -5,17 +5,23 @@ module.exports = {
   // see <http://truffleframework.com/docs/advanced/configuration>
   // for more details on how to specify configuration options!
   //
-  //networks: {
-  //  development: {
-  //    host: "127.0.0.1",
-  //    port: 7545,
-  //    network_id: "*"
-  //  },
-  //  test: {
-  //    host: "127.0.0.1",
-  //    port: 7545,
-  //    network_id: "*"
-  //  }
-  //}
+  networks: {
+   development: {
+     host: "127.0.0.1",
+     port: 7545,
+     network_id: "*"
+   },
+   test: {
+     host: "127.0.0.1",
+     port: 7545,
+     network_id: "*"
+   },
+    goerli: {
+      provider: function() {
+        return new HDWalletProvider(data, "https://goerli.infura.io/v3/53e706eaa088405491d1e311f6a6938b")
+      },
+      network_id: 5
+    },
+  }
   //
 };
